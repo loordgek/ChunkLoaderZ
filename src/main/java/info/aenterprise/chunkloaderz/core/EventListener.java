@@ -22,7 +22,7 @@ public class EventListener {
 	public void livingDeath(LivingDropsEvent event) {
 		EntityLivingBase entity = event.getEntityLiving();
 		if (entity instanceof EntityGuardian) {
-			EntityItem entityItem = new EntityItem(((EntityGuardian) entity).world, entity.posX, entity.posY, entity.posZ, new ItemStack(ItemLoader.guardianPearl));
+			EntityItem entityItem = new EntityItem(entity.world, entity.posX, entity.posY, entity.posZ, new ItemStack(ItemLoader.guardianPearl));
 			event.getDrops().add(entityItem);
 		}
 	}
