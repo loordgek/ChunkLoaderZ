@@ -54,7 +54,7 @@ public class BlockAnhoredPearl extends Block {
 			TileEntityAnchoredPearl pearl = (TileEntityAnchoredPearl) entity;
 			if (!pearl.isStillHere() && !worldIn.isRemote) {
 				BlockPos whereItWent = pearl.getWhereItWent();
-				playerIn.sendStatusMessage(new TextComponentString(String.format("This pearl teleported to %d, %d, %d", whereItWent.getX(), whereItWent.getY(), whereItWent.getZ())), true);
+				playerIn.sendMessage(new TextComponentString(String.format("This pearl teleported to %d, %d, %d", whereItWent.getX(), whereItWent.getY(), whereItWent.getZ())));
 			}
 			return true;
 		}
